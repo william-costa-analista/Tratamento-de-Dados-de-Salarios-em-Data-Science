@@ -36,3 +36,5 @@ Nesta etapa, foram aplicadas três transformações críticas para garantir a qu
 Após o tratamento, os dados limpos e transformados foram exportados para um novo arquivo, pronto para ser consumido por ferramentas como Power BI ou Tableau.
 
 * **Arquivo gerado:** `Data_Science_Salary.csv`
+
+## Base de dados utilizada: https://www.kaggle.com/datasets/whenamancodes/data-science-fields-salary-categorization
