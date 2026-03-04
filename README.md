@@ -38,3 +38,5 @@ Após o tratamento, os dados limpos e transformados foram exportados para um nov
 * **Arquivo gerado:** `Data_Science_Salary.csv`
 
 ## Base de dados utilizada: https://www.kaggle.com/datasets/whenamancodes/data-science-fields-salary-categorization
+
+![gif dash.gif](https://github.com/willcosta29/Tratamento-de-Dados-de-Salarios-em-Data-Science/blob/53c5516f66794dca7e59703e4c96dc5e0cd29b62/gif%20dash.gif)
