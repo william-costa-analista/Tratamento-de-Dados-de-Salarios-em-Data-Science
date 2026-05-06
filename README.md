@@ -1,7 +1,7 @@
 # 📊 Tratamento de Dados de Salários em Data Science
 
 <div align="center">
-  <img src="Imagens%20do%20repositório/Dashboard_Visao_Geral.png" alt="Dashboard Visão Geral" width="100%">
+  <img src="Dashboard_Visao_Geral.png" alt="Dashboard Visão Geral" width="100%">
 </div>
 
 ---
