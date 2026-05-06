@@ -25,8 +25,8 @@ O dataset original foi carregado a partir do arquivo `Data_Science_Fields_Salary
 
 **Etapas de Inserção e Navegação Inicial:**
 <p align="center">
-  <img src="Imagens%20do%20repositório/001-Inserir%20Dados.png" width="48%" />
-  <img src="Imagens%20do%20repositório/002-Inserir%20Dados.png" width="48%" />
+  <img src="/001-Inserir%20Dados.png" width="48%" />
+  <img src="002-Inserir%20Dados.png" width="48%" />
 </p>
 
 ### 3.2. 🔄 Transformação (Transform)
@@ -34,20 +34,20 @@ Nesta etapa, aplicamos diversas transformações críticas para garantir a quali
 
 **Navegando e Explorando os Dados:**
 <p align="center">
-  <img src="Imagens%20do%20repositório/003-Navegador.png" width="48%" />
-  <img src="Imagens%20do%20repositório/004-Navegador.png" width="48%" />
+  <img src="003-Navegador.png" width="48%" />
+  <img src="004-Navegador.png" width="48%" />
 </p>
 
 **Passos Realizados:**
 
 1. **Mantendo Apenas as Colunas Necessárias:** Selecionamos exclusivamente as colunas relevantes para a análise final, otimizando o dataset.
    <br/><br/>
-   <img src="Imagens%20do%20repositório/005-Mantendo%20Colunas%20Necessarias.png" width="80%" />
+   <img src="005-Mantendo%20Colunas%20Necessarias.png" width="80%" />
    <br/><br/>
 
 2. **Remoção de Nulos (NaN):** Identificação e tratamento de valores ausentes para evitar distorções nas métricas.
    <br/><br/>
-   <img src="Imagens%20do%20repositório/005-Removendo%20os%20Nulos.png" width="80%" />
+   <img src="005-Removendo%20os%20Nulos.png" width="80%" />
    <br/><br/>
 
 3. **Limpeza e Tipagem:** A coluna `Salary_In_Rupees` continha caracteres de texto (como vírgulas), que foram removidos para converter o campo corretamente em um tipo numérico (float).
@@ -66,7 +66,7 @@ Nesta etapa, aplicamos diversas transformações críticas para garantir a quali
 
 **Modelagem e Estruturação Final:**
 <p align="center">
-  <img src="Imagens%20do%20repositório/007-Modelando.png" width="80%" />
+  <img src="007-Modelando.png" width="80%" />
 </p>
 
 ### 3.3. 📤 Carga (Load)
@@ -76,7 +76,7 @@ Após o tratamento, os dados limpos e transformados foram exportados para um nov
 
 **Amostra do Resultado Final dos Dados:**
 <p align="center">
-  <img src="Imagens%20do%20repositório/006-Resultado%20Final.png" width="100%" />
+  <img src="006-Resultado%20Final.png" width="100%" />
 </p>
 
 ---
