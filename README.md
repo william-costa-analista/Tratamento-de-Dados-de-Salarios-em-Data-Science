@@ -21,39 +21,36 @@ Este projeto tem como objetivo realizar o processo de **ETL (Extração, Transfo
 Abaixo apresentamos o diagrama do fluxo de dados que demonstra, de ponta a ponta, todo o processo de construção e execução do projeto, desde a coleta nas fontes até a visualização final:
 
 ```mermaid
-graph TD
+graph LR
     %% Estilização
     classDef source fill:#191c22,stroke:#75ff9e,stroke-width:2px,color:#fff;
     classDef transform fill:#2563eb,stroke:#fff,stroke-width:2px,color:#fff;
     classDef load fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff;
     classDef dashboard fill:#059669,stroke:#fff,stroke-width:3px,color:#fff;
 
-    %% Fontes de Dados
-    A[(Kaggle: CSV Dataset)]:::source
-    B[Wikipedia: Tabela ISO 3166-1]:::source
+    %% Nodes
+    A[(Kaggle CSV)]:::source
+    B[Wikipedia ISO 3166-1]:::source
+    
+    C[Limpeza e Tipagem]:::transform
+    D[Conversão de Moedas]:::transform
+    E[Padronização Senioridade]:::transform
+    
+    G[(CSV Tratado)]:::load
+    H[Power BI]:::load
+    I{Dashboard}:::dashboard
 
-    %% Transformação em Python
-    subgraph Python [Transformação em Python / Pandas]
-        C[Limpeza de Colunas]:::transform
-        D[Tratamento de Nulos & Tipagem]:::transform
-        E[Conversão Dólar/Rúpia]:::transform
-        F[Padronização de Senioridade]:::transform
-    end
-
-    %% Integração e BI
-    G[(Exportação: CSV Tratado)]:::load
-    H[Power BI: Carga & Modelagem]:::load
-    I{Dashboard Interativo}:::dashboard
-
-    %% Conexões
+    %% Fluxo Principal
     A --> C
     C --> D
     D --> E
-    E --> F
-    F --> G
+    E --> G
     
-    B -.->|Conexão Web| H
-    G -->|Importação| H
+    %% Carga no BI
+    G --> H
+    B --> H
+    
+    %% Final
     H --> I
 ```
 
@@ -129,3 +126,4 @@ Após o tratamento, os dados limpos e transformados foram exportados para um nov
 
 ## 🎥 Demonstração do Projeto
 ![Demonstração do Dashboard](https://github.com/willcosta29/Tratamento-de-Dados-de-Salarios-em-Data-Science/blob/53c5516f66794dca7e59703e4c96dc5e0cd29b62/gif%20dash.gif?raw=true)
+
