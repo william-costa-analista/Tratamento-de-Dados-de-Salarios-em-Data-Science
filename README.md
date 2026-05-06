@@ -17,11 +17,54 @@ Este projeto tem como objetivo realizar o processo de **ETL (Extração, Transfo
 
 ## 3. ⚙️ Processo de ETL Passo a Passo
 
-### 3.1. 📥 Extração (Extract)
-O dataset original foi carregado a partir do arquivo `Data_Science_Fields_Salary_Categorization.csv`.
+### 🗺️ Arquitetura e Fluxo de Dados
+Abaixo apresentamos o diagrama do fluxo de dados que demonstra, de ponta a ponta, todo o processo de construção e execução do projeto, desde a coleta nas fontes até a visualização final:
 
-* **Fonte:** Kaggle.
-* **Formato:** CSV.
+```mermaid
+graph TD
+    %% Estilização
+    classDef source fill:#191c22,stroke:#75ff9e,stroke-width:2px,color:#fff;
+    classDef transform fill:#2563eb,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef load fill:#10b981,stroke:#fff,stroke-width:2px,color:#fff;
+    classDef dashboard fill:#059669,stroke:#fff,stroke-width:3px,color:#fff;
+
+    %% Fontes de Dados
+    A[(Kaggle: CSV Dataset)]:::source
+    B[Wikipedia: Tabela ISO 3166-1]:::source
+
+    %% Transformação em Python
+    subgraph Python [Transformação em Python / Pandas]
+        C[Limpeza de Colunas]:::transform
+        D[Tratamento de Nulos & Tipagem]:::transform
+        E[Conversão Dólar/Rúpia]:::transform
+        F[Padronização de Senioridade]:::transform
+    end
+
+    %% Integração e BI
+    G[(Exportação: CSV Tratado)]:::load
+    H[Power BI: Carga & Modelagem]:::load
+    I{Dashboard Interativo}:::dashboard
+
+    %% Conexões
+    A --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    
+    B -.->|Conexão Web| H
+    G -->|Importação| H
+    H --> I
+```
+
+### 3.1. 📥 Extração (Extract)
+A fase de extração envolveu a coleta de dados de duas fontes distintas para compor o modelo final do dashboard:
+
+1. **Dataset Principal:** Carregado a partir do arquivo `Data_Science_Fields_Salary_Categorization.csv`.
+   * **Fonte:** Kaggle.
+   * **Formato:** CSV.
+   
+2. **Dados Geográficos (Web Scraping):** Foi extraída uma tabela diretamente da página da **Wikipedia** contendo os códigos dos países no padrão **ISO 3166-1**. Esses dados foram puxados diretamente para o Power BI para permitir a correta identificação das localidades e a criação de visualizações interativas em mapas.
 
 **Etapas de Inserção e Navegação Inicial:**
 <p align="center">
