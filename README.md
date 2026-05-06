@@ -25,7 +25,7 @@ O dataset original foi carregado a partir do arquivo `Data_Science_Fields_Salary
 
 **Etapas de Inserção e Navegação Inicial:**
 <p align="center">
-  <img src="/001-Inserir%20Dados.png" width="35%" />
+  <img src="/001-Inserir%20Dados.png" width="25%" />
   <img src="002-Inserir%20Dados.png" width="48%" />
 </p>
 
@@ -35,7 +35,7 @@ Nesta etapa, aplicamos diversas transformações críticas para garantir a quali
 **Navegando e Explorando os Dados:**
 <p align="center">
   <img src="003-Navegador.png" width="35%" />
-  <img src="004-Navegador.png" width="35%" />
+  <img src="004-Navegador.png" width="55%" />
 </p>
 
 **Passos Realizados:**
