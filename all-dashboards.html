@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Galeria de Dashboards | Portfolio William S. Costa</title>
+    <meta name="description"
+        content="Coleção completa de dashboards de Business Intelligence e ferramentas analíticas desenvolvidas por William S. Costa.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg width='512' height='512' viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2360a5fa;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='256' fill='url(%23grad)' /%3E%3Crect x='120' y='260' width='70' height='120' rx='8' fill='white' /%3E%3Crect x='220' y='180' width='70' height='200' rx='8' fill='white' /%3E%3Crect x='320' y='100' width='70' height='280' rx='8' fill='white' /%3E%3Crect x='80' y='380' width='352' height='40' rx='20' fill='white' /%3E%3C/svg%3E">
+    <meta property="og:title" content="Galeria de Dashboards">
+    <meta property="og:description" content="Navegue pelos meus projetos de visualização e análise de dados.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#c1c1ff",
+                        "surface-container-low": "#1b1b23",
+                        "error": "#ffb4ab",
+                        "surface-container": "#1f1f27",
+                        "on-secondary-container": "#b3b3f1",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#34343d",
+                        "primary-fixed": "#e2dfff",
+                        "background": "#13131b",
+                        "tertiary": "#ffb787",
+                        "on-tertiary-fixed": "#311300",
+                        "on-primary-fixed-variant": "#322dbd",
+                        "surface-container-high": "#2a2932",
+                        "primary-container": "#5c5be5",
+                        "outline-variant": "#464554",
+                        "on-surface": "#e4e1ed",
+                        "on-tertiary-container": "#ffeee6",
+                        "on-primary": "#1700a8",
+                        "inverse-on-surface": "#302f38",
+                        "on-primary-fixed": "#0a006b",
+                        "on-background": "#e4e1ed",
+                        "secondary-fixed-dim": "#c1c1ff",
+                        "on-tertiary": "#512400",
+                        "on-primary-container": "#f2efff",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#4c4ad5",
+                        "surface-container-lowest": "#0e0d15",
+                        "tertiary-fixed-dim": "#ffb787",
+                        "on-surface-variant": "#c7c4d7",
+                        "secondary-container": "#43437a",
+                        "on-secondary-fixed-variant": "#414177",
+                        "inverse-surface": "#e4e1ed",
+                        "tertiary-fixed": "#ffdcc7",
+                        "on-secondary": "#2a2a5f",
+                        "surface-bright": "#393841",
+                        "surface": "#13131b",
+                        "tertiary-container": "#ae5500",
+                        "on-secondary-fixed": "#141449",
+                        "surface-container-highest": "#34343d",
+                        "secondary": "#c1c1ff",
+                        "surface-dim": "#13131b",
+                        "on-tertiary-fixed-variant": "#733600",
+                        "secondary-fixed": "#e2dfff",
+                        "on-error": "#690005",
+                        "surface-tint": "#c1c1ff",
+                        "primary": "#c1c1ff",
+                        "outline": "#918fa0"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(200%);
+            }
+        }
+
+        body {
+            background-color: #10131a;
+            color: #e4e1ed;
+        }
+
+        /* Glass Logo Styling */
+        .glass-logo {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark .glass-logo {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-logo:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+
+        .logo-line {
+            stroke-dasharray: none;
+            stroke-dashoffset: 0;
+            transition: none;
+        }
+
+        .bar-anim {
+            fill-opacity: 0.6;
+            transition: none;
+        }
+    </style>
+</head>
+
+<body class="font-body selection:bg-primary/30">
+    <!-- TopNavBar Component -->
+    <nav class="fixed top-0 w-full z-50 bg-[#10131a] shadow-2xl shadow-black/40">
+        <div class="flex items-center justify-between px-8 py-4 max-w-[1440px] mx-auto">
+            <div class="flex items-center gap-3 group/logo">
+                <div class="glass-logo flex items-center justify-center size-10 rounded-lg text-secondary">
+                    <svg viewBox="0 0 100 80" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="34" y="48" width="10" height="28" rx="1.5" fill="currentColor" fill-opacity="0.3"
+                            class="bar-anim" />
+                        <rect x="48" y="38" width="10" height="38" rx="1.5" fill="currentColor" fill-opacity="0.3"
+                            class="bar-anim" />
+                        <rect x="62" y="14" width="10" height="62" rx="1.5" fill="currentColor" fill-opacity="0.3"
+                            class="bar-anim" />
+                        <path d="M 15 75 C 25 72, 32 68, 38 65 C 44 62, 50 72, 58 65 C 68 55, 78 40, 88 25"
+                            stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                            class="logo-line" />
+                    </svg>
+                </div>
+                <h2 class="text-[#e1e2eb] text-lg font-bold leading-tight tracking-tight">
+                    Galeria de Dashboards</h2>
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-manrope text-sm font-medium tracking-tight">
+                <a class="text-[#b0c6ff] hover:text-[#e1e2eb] transition-colors" href="index.html">Home</a>
+                <a class="text-[#75ff9e] border-b-2 border-[#75ff9e] pb-1" href="#">Dashboards</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="relative inline-block text-left" id="contact-dropdown-container">
+                    <button onclick="toggleContactDropdown(event)" id="contact-btn"
+                        class="bg-[#75ff9e] text-[#10131a] px-6 py-2 rounded-lg font-bold text-sm hover:bg-[#5ce685] active:scale-95 duration-150 transition-all flex items-center gap-2">
+                        Contrate-me
+                        <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                    <!-- Dropdown Menu -->
+                    <div id="contact-menu"
+                        class="hidden absolute right-0 mt-2 w-48 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl z-[60] py-2 transition-all">
+                        <a href="https://www.linkedin.com/in/william-costa-analista-de-dados" target="_blank"
+                            class="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined text-primary">link</span>
+                            LinkedIn
+                        </a>
+                        <a href="mailto:data.analyst@williamscosta.dev"
+                            class="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined text-primary">mail</span>
+                            E-mail
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24 px-6 max-w-[1100px] mx-auto">
+        <!-- Header Section -->
+        <header class="mb-16">
+            <h1 class="font-headline text-5xl font-extrabold tracking-tight text-[#e1e2eb] mb-4">
+                Galeria de <span class="text-secondary">Dashboards</span>
+            </h1>
+            <p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed">
+                Explore a coleção completa de soluções analíticas desenvolvidas para transformar dados brutos em
+                decisões estratégicas de alto impacto.
+            </p>
+        </header>
+        <!-- Dashboard Project List -->
+        <div class="space-y-12">
+            <!-- Project: LogRapid -->
+            <article
+                class="group bg-surface-container-low rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-secondary">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-2/5 aspect-video md:aspect-auto overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                            src="lograpid.png" />
+                    </div>
+                    <div class="w-full md:w-3/5 p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="font-headline text-2xl font-bold text-on-surface">LogRapid | Inteligência
+                                Logística
+                            </h2>
+                            <span
+                                class="text-xs font-label tracking-widest text-secondary uppercase bg-secondary-container/30 px-3 py-1 rounded-full">Gestão
+                                de Supply Chain</span>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            Monitoramento estratégico de performance logística com foco em OTIF, identificação de
+                            gargalos operacionais e eficiência de transporte em hubs logísticos.
+                        </p>
+                        <div class="flex items-center gap-3 mb-8">
+                            <div
+                                class="flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded-lg border border-outline-variant/15">
+                                <span class="material-symbols-outlined text-sm text-secondary">bar_chart</span>
+                                <span class="text-[10px] font-medium text-on-surface-variant">Power BI</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded-lg border border-outline-variant/15">
+                                <span class="material-symbols-outlined text-sm text-secondary">database</span>
+                                <span class="text-[10px] font-medium text-on-surface-variant">SQL Server</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded-lg border border-outline-variant/15">
+                                <span class="material-symbols-outlined text-sm text-secondary">rocket_launch</span>
+                                <span class="text-[10px] font-medium text-on-surface-variant">Logística 4.0</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="lograpid-details.html"
+                                class="inline-flex items-center gap-2 bg-secondary text-on-secondary font-bold py-3 px-8 rounded-lg hover:bg-secondary/90 transition-all active:scale-95 text-center">
+                                Ver Detalhes
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Project 1 -->
+            <article
+                class="group bg-surface-container-low rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-secondary">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-2/5 aspect-video md:aspect-auto overflow-hidden">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                            data-alt="Modern sales analytics dashboard with blue charts"
+                            src="comparativo_salarial.png" />
+                    </div>
+                    <div class="w-full md:w-3/5 p-8 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="font-headline text-2xl font-bold text-on-surface">Dashboard Comparativo de
+                                Salários
+                            </h2>
+                            <span
+                                class="text-xs font-label tracking-widest text-secondary uppercase bg-secondary-container/30 px-3 py-1 rounded-full">Mercado
+                                de Dados</span>
+                        </div>
+                        <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                            Análise detalhada de tendências salariais globais e comparativos de remuneração para
+                            profissionais de tecnologia, abrangendo senioridade, geografia e modelos de trabalho.
+                        </p>
+                        <div class="flex items-center gap-3 mb-8">
+                            <div
+                                class="flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded-lg border border-outline-variant/15">
+                                <span class="material-symbols-outlined text-sm text-secondary">bar_chart</span>
+                                <span class="text-[10px] font-medium text-on-surface-variant">Power BI</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded-lg border border-outline-variant/15">
+                                <span class="material-symbols-outlined text-sm text-secondary">database</span>
+                                <span class="text-[10px] font-medium text-on-surface-variant">SQL</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-1.5 px-2 py-1 bg-surface-container rounded-lg border border-outline-variant/15">
+                                <span class="material-symbols-outlined text-sm text-secondary">code</span>
+                                <span class="text-[10px] font-medium text-on-surface-variant">Python</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <a href="dashboard-details.html"
+                                class="inline-flex items-center gap-2 bg-secondary text-on-secondary font-bold py-3 px-8 rounded-lg hover:bg-secondary/90 transition-all active:scale-95 text-center">
+                                Ver Detalhes
+                                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Project 2 (Commented Out) -->
+            <!--
+            <article
+                class="group bg-surface-container-low rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-primary">
+                ... (Oculto)
+            </article>
+            -->
+
+            <!-- Placeholder: Em Breve 1 -->
+            <div
+                class="flex flex-col items-center justify-center gap-6 p-12 rounded-xl bg-surface-container-low border-l-4 border-dashed border-primary/50 min-h-[300px] shadow-xl">
+                <div class="flex items-center gap-6 animate-pulse">
+                    <span class="text-6xl text-amber-500">🚧</span>
+                    <span class="text-2xl font-headline font-bold text-on-surface-variant tracking-[0.2em] uppercase">Em
+                        Breve...</span>
+                    <span class="text-6xl text-amber-500">🚧</span>
+                </div>
+                <div class="w-64 h-2 bg-surface-container rounded-full overflow-hidden">
+                    <div class="h-full bg-secondary w-1/3 animate-[loading_1.5s_infinite_ease-in-out]"></div>
+                </div>
+                <p class="text-on-surface-variant text-sm font-medium opacity-60 italic">Otimizando a cadeia de
+                    suprimentos analítica...</p>
+            </div>
+
+            <!-- Project 3 (Commented Out) -->
+            <!--
+            <article
+                class="group bg-surface-container-low rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border-l-4 border-tertiary">
+                ... (Oculto)
+            </article>
+            -->
+
+            <!-- Placeholder: Em Breve 2 -->
+            <div
+                class="flex flex-col items-center justify-center gap-6 p-12 rounded-xl bg-surface-container-low border-l-4 border-dashed border-tertiary/50 min-h-[300px] shadow-xl">
+                <div class="flex items-center gap-6 animate-pulse">
+                    <span class="text-6xl text-amber-500">🚧</span>
+                    <span class="text-2xl font-headline font-bold text-on-surface-variant tracking-[0.2em] uppercase">Em
+                        Breve...</span>
+                    <span class="text-6xl text-amber-500">🚧</span>
+                </div>
+                <div class="w-64 h-2 bg-surface-container rounded-full overflow-hidden">
+                    <div class="h-full bg-secondary w-1/3 animate-[loading_1.5s_infinite_ease-in-out_0.5s]"></div>
+                </div>
+                <p class="text-on-surface-variant text-sm font-medium opacity-60 italic">Projetando cenários financeiros
+                    futuros...</p>
+            </div>
+        </div>
+        <!-- Pagination/Load More (Simplified for professional look) -->
+        <div class="mt-20 flex justify-center">
+            <button
+                class="group flex items-center gap-3 text-secondary font-bold py-4 px-10 border-2 border-secondary/30 rounded-full hover:bg-secondary/5 transition-all">
+                Carregar mais projetos
+                <span
+                    class="material-symbols-outlined group-hover:rotate-180 transition-transform duration-500">expand_more</span>
+            </button>
+        </div>
+    </main>
+    <!-- Footer Component -->
+    <footer class="w-full py-12 border-t border-[#1d2026]/15 bg-[#10131a]">
+        <div class="flex flex-col items-center gap-4 w-full">
+            <div class="flex gap-8">
+                <a class="font-inter text-xs tracking-widest uppercase text-[#b0c6ff]/60 hover:text-[#75ff9e] transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-inter text-xs tracking-widest uppercase text-[#b0c6ff]/60 hover:text-[#75ff9e] transition-colors"
+                    href="#">Terms of Service</a>
+            </div>
+            <div class="font-inter text-xs tracking-widest uppercase text-[#b0c6ff] opacity-80">
+                © 2024 Ver Todos Dashboards • The Silent Analyst
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleContactDropdown(event) {
+            event.stopPropagation();
+            const menu = document.getElementById('contact-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close on click outside
+        window.addEventListener('click', () => {
+            document.getElementById('contact-menu')?.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>

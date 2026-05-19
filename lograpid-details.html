@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>LogRapid | Inteligência Logística & OTIF</title>
+  <meta name="description"
+    content="Análise detalhada de performance logística, monitoramento de OTIF e identificação de gargalos operacionais e comerciais.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg width='512' height='512' viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2360a5fa;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='256' fill='url(%23grad)' /%3E%3Crect x='120' y='260' width='70' height='120' rx='8' fill='white' /%3E%3Crect x='220' y='180' width='70' height='200' rx='8' fill='white' /%3E%3Crect x='320' y='100' width='70' height='280' rx='8' fill='white' /%3E%3Crect x='80' y='380' width='352' height='40' rx='20' fill='white' /%3E%3C/svg%3E">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seusite.com/lograpid-details.html">
+  <meta property="og:title" content="LogRapid | Inteligência Logística & OTIF">
+  <meta property="og:description"
+    content="Otimização de processos logísticos através de dados. Insights sobre OTIF e eficiência de entrega.">
+  <meta property="og:image" content="https://seusite.com/lograpid.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="LogRapid | Inteligência Logística">
+  <meta property="twitter:description"
+    content="Análise de performance logística e monitoramento de OTIF.">
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-surface": "#e1e2eb",
+            "outline-variant": "#3b4a3d",
+            "secondary-fixed": "#d9e2ff",
+            "surface-container-low": "#191c22",
+            "secondary-container": "#0068ed",
+            "primary-fixed": "#62ff96",
+            "on-secondary": "#002d6e",
+            "tertiary-fixed": "#68fadd",
+            "primary-container": "#00e676",
+            "surface-tint": "#00e475",
+            "secondary": "#b0c6ff",
+            "on-tertiary": "#00382f",
+            "surface-container-high": "#272a31",
+            "surface-bright": "#363940",
+            "on-secondary-fixed": "#001945",
+            "surface": "#10131a",
+            "surface-container-lowest": "#0b0e14",
+            "surface-container": "#1d2026",
+            "on-tertiary-fixed-variant": "#005145",
+            "on-primary-fixed": "#00210b",
+            "tertiary": "#6afcdf",
+            "on-primary-container": "#00612e",
+            "error": "#ffb4ab",
+            "on-secondary-container": "#f2f3ff",
+            "on-tertiary-container": "#005f51",
+            "on-background": "#e1e2eb",
+            "surface-dim": "#10131a",
+            "on-secondary-fixed-variant": "#00429b",
+            "primary": "#75ff9e",
+            "error-container": "#93000a",
+            "primary-fixed-dim": "#00e475",
+            "on-primary-fixed-variant": "#005226",
+            "background": "#10131a",
+            "on-surface-variant": "#bacbb9",
+            "on-surface": "#e1e2eb",
+            "tertiary-fixed-dim": "#44ddc1",
+            "inverse-primary": "#006d35",
+            "surface-variant": "#32353c",
+            "on-primary": "#003918",
+            "on-error": "#690005",
+            "tertiary-container": "#47dfc4",
+            "on-error-container": "#ffdad6",
+            "secondary-fixed-dim": "#b0c6ff",
+            "outline": "#859585",
+            "surface-container-highest": "#32353c",
+            "inverse-on-surface": "#2e3037",
+            "on-tertiary-fixed": "#00201a"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-insight {
+      background: rgba(54, 57, 64, 0.4);
+      backdrop-filter: blur(12px);
+      border-left: 2px solid #75ff9e;
+    }
+
+    body {
+      background-color: #10131a;
+      color: #e1e2eb;
+    }
+
+    /* Refined Light Mode Styles */
+    html.light body {
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    html.light nav {
+      background-color: #ffffff !important;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    html.light .bg-\[\#10131a\] {
+      background-color: #ffffff;
+    }
+
+    html.light .bg-\[\#191c22\] {
+      background-color: #ffffff;
+    }
+
+    html.light .bg-\[\#1d2026\] {
+      background-color: #f1f5f9;
+    }
+
+    html.light .bg-surface-container-low {
+      background-color: #ffffff;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+
+    html.light .bg-surface-container-lowest {
+      background-color: #f8fafc;
+    }
+
+    html.light .text-\[\#e1e2eb\] {
+      color: #0f172a;
+    }
+
+    html.light .text-\[\#b0c6ff\] {
+      color: #334155;
+    }
+
+    html.light .text-on-surface-variant {
+      color: #475569;
+    }
+
+    html.light .text-on-surface {
+      color: #0f172a;
+    }
+
+    html.light .glass-insight {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #059669;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+
+    html.light .text-primary {
+      color: #059669;
+    }
+
+    html.light .bg-primary {
+      background-color: #059669;
+      color: white;
+    }
+
+    html.light .border-primary\/30 {
+      border-color: rgba(5, 150, 105, 0.3);
+    }
+
+    html.light .bg-primary\/20 {
+      background-color: rgba(5, 150, 105, 0.1);
+    }
+
+    html.light .bg-primary\/10 {
+      background-color: rgba(5, 150, 105, 0.05);
+    }
+
+    html.light aside {
+      background-color: #ffffff !important;
+      border-right: 1px solid #e2e8f0;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.05);
+    }
+
+    html.light .border-l-4.border-\[\#75ff9e\] {
+      border-color: #059669;
+    }
+
+    html.light .text-\[\#75ff9e\] {
+      color: #059669;
+    }
+
+    html.light .material-symbols-outlined {
+      color: #475569;
+    }
+
+    html.light .text-primary .material-symbols-outlined,
+    html.light .text-primary.material-symbols-outlined {
+      color: #059669;
+    }
+
+    html.light .text-error.material-symbols-outlined {
+      color: #dc2626;
+    }
+
+    html.light .text-secondary.material-symbols-outlined {
+      color: #2563eb;
+    }
+
+    html.light .text-tertiary.material-symbols-outlined {
+      color: #0d9488;
+    }
+
+    .glass-logo {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html.dark .glass-logo {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-logo:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .logo-line {
+      stroke-dasharray: none;
+      stroke-dashoffset: 0;
+      transition: none;
+    }
+
+    .bar-anim {
+      fill-opacity: 0.6;
+      transition: none;
+    }
+
+    /* Responsive Dashboard Scale */
+    #dashboard-iframe {
+        width: 1400px;
+        height: 875px;
+        transform-origin: center center;
+        transform: scale(0.25);
+        flex-shrink: 0;
+    }
+
+    @media (min-width: 480px) {
+        #dashboard-iframe {
+            transform: scale(0.35);
+        }
+    }
+
+    @media (min-width: 768px) {
+        #dashboard-iframe {
+            transform: scale(0.55);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #dashboard-iframe {
+            transform: scale(0.65);
+        }
+    }
+  </style>
+</head>
+
+<body class="font-body antialiased transition-colors duration-300">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-[#10131a] font-headline antialiased tracking-tight shadow-none border-none">
+    <div class="flex items-center justify-between px-8 h-16 w-full max-w-none bg-[#191c22]">
+      <div class="flex items-center gap-3 group/logo">
+        <div class="glass-logo flex items-center justify-center size-10 rounded-lg text-primary">
+          <svg viewBox="0 0 100 80" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="34" y="48" width="10" height="28" rx="1.5" fill="currentColor" fill-opacity="0.3"
+              class="bar-anim" />
+            <rect x="48" y="38" width="10" height="38" rx="1.5" fill="currentColor" fill-opacity="0.3"
+              class="bar-anim" />
+            <rect x="62" y="14" width="10" height="62" rx="1.5" fill="currentColor" fill-opacity="0.3"
+              class="bar-anim" />
+            <path d="M 15 75 C 25 72, 32 68, 38 65 C 44 62, 50 72, 58 65 C 68 55, 78 40, 88 25" stroke="currentColor"
+              stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="logo-line" />
+          </svg>
+        </div>
+        <h2 class="text-[#e1e2eb] text-lg font-bold leading-tight tracking-tight">
+          Analista de Dados</h2>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-[#b0c6ff] hover:text-[#e1e2eb] transition-colors" href="index.html">Portifólio</a>
+      </div>
+      <div class="flex items-center gap-4">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-12 px-8 max-w-[1440px] mx-auto min-h-screen">
+    <!-- Header Section -->
+    <header class="mb-12">
+      <h1 class="font-headline text-4xl font-extrabold text-on-surface tracking-tighter mb-2">
+        Dashboard Logística | <span class="text-primary">LogRapid</span>
+      </h1>
+      <p class="text-on-surface-variant max-w-2xl text-lg">
+        Monitoramento estratégico de performance logística com foco em OTIF, identificação de gargalos comerciais e eficiência de transporte.
+      </p>
+    </header>
+
+    <!-- Main Dashboard View (Bento Layout) -->
+    <div class="grid grid-cols-12 gap-6 mb-12">
+      <!-- Dashboard Embed -->
+      <div class="col-span-12 lg:col-span-8 bg-surface-container-low rounded-xl overflow-hidden shadow-2xl relative">
+        <div class="aspect-[1.6] relative group bg-[#0b0e14] overflow-hidden flex justify-center items-center rounded-xl border border-white/10 shadow-inner">
+          <iframe id="dashboard-iframe" title="LogRapid_Dashboard" class="border-0"
+            src="https://app.powerbi.com/view?r=eyJrIjoiOGMyNThkMWItMDljZC00M2JmLWEyMjEtZTY4YTg0MzBmZjE1IiwidCI6IjQyYTVhZTk3LWEyZjgtNGUzOC05YTJmLWZhNmRmY2M3MmUyMSJ9"
+            allowFullScreen="true">
+          </iframe>
+          <div class="absolute bottom-6 left-6 flex items-center gap-3 pointer-events-none">
+            <span
+              class="px-3 py-1 bg-primary/20 text-primary border border-primary/30 rounded-full text-xs font-bold uppercase tracking-widest">Relatório
+              Interativo</span>
+            <h3 class="font-headline text-xl font-bold bg-[#10131a]/80 px-2 py-1 rounded">LogRapid - Gestão Logística</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Cards Column -->
+      <div class="col-span-12 lg:col-span-4 grid grid-cols-1 gap-6">
+        <!-- KPI 1 -->
+        <div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between border-l-4 border-primary">
+          <div class="flex justify-between items-start">
+            <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">OTIF (On-Time In-Full)</span>
+            <span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+          </div>
+          <div>
+            <div class="font-headline text-4xl font-extrabold text-on-surface">67.64%</div>
+            <div class="text-primary text-sm font-medium mt-1 flex items-center gap-1">
+              Indicador principal de excelência em entregas
+            </div>
+          </div>
+        </div>
+        <!-- KPI 2 -->
+        <div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+          <div class="flex justify-between items-start">
+            <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Responsabilidade Comercial</span>
+            <span class="material-symbols-outlined text-secondary" data-icon="store">store</span>
+          </div>
+          <div>
+            <div class="font-headline text-4xl font-extrabold text-on-surface">67.24%</div>
+            <div class="text-on-surface-variant text-sm mt-1">Das ocorrências geradas na entrada de pedidos</div>
+          </div>
+        </div>
+        <!-- KPI 3 -->
+        <div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+          <div class="flex justify-between items-start">
+            <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Top Causa Ocorrência</span>
+            <span class="material-symbols-outlined text-tertiary" data-icon="warning">warning</span>
+          </div>
+          <div>
+            <div class="font-headline text-4xl font-extrabold text-on-surface">Falta de Pedido</div>
+            <div class="text-tertiary text-sm font-medium mt-1">19.64% do total de falhas registradas</div>
+          </div>
+        </div>
+        <!-- KPI 4 -->
+        <div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between">
+          <div class="flex justify-between items-start">
+            <span class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">Total On Time</span>
+            <span class="material-symbols-outlined text-secondary" data-icon="schedule">schedule</span>
+          </div>
+          <div>
+            <div class="font-headline text-4xl font-extrabold text-on-surface">96.000</div>
+            <div class="text-on-surface-variant text-sm mt-1">Entregas realizadas dentro do prazo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold mb-6 flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+        Logistics Intelligence & Insights
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Insight 1 -->
+        <div
+          class="glass-insight p-8 rounded-xl relative overflow-hidden group hover:bg-surface-container-low/60 transition-all duration-500">
+          <div class="absolute -right-8 -top-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <span class="material-symbols-outlined text-[120px]" data-icon="analytics">analytics</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-secondary font-bold uppercase text-xs tracking-widest mb-4">Gargalos na Operação</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                <p class="text-on-surface text-lg leading-relaxed">
+                  A maior parte das falhas de entrega (<strong>67.2%</strong>) é de origem <strong>Comercial</strong>, indicando que o problema começa antes da carga sair para entrega.
+                </p>
+              </div>
+              <div class="flex items-start gap-4 pt-4 border-t border-outline/10">
+                <div class="w-2 h-2 rounded-full bg-secondary mt-2"></div>
+                <p class="text-on-surface text-lg leading-relaxed">
+                  As causas "<strong>Falta de Pedido</strong>" e "<strong>Pedido Incompleto</strong>" somam mais de 35% das ocorrências, sugerindo falhas na integração de sistemas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Insight 2 -->
+        <div
+          class="glass-insight p-8 rounded-xl relative overflow-hidden group hover:bg-surface-container-low/60 transition-all duration-500 border-l-secondary">
+          <div class="absolute -right-8 -top-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <span class="material-symbols-outlined text-[120px]" data-icon="trending_up">trending_up</span>
+          </div>
+          <div class="relative z-10">
+            <h4 class="text-primary font-bold uppercase text-xs tracking-widest mb-4">Tendência de Performance</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="w-2 h-2 rounded-full bg-secondary mt-2"></div>
+                <p class="text-on-surface text-lg leading-relaxed">
+                  O OTIF demonstrou uma <strong>recuperação sólida</strong> a partir de 2020, estabilizando em patamares próximos a <strong>80%</strong> nos anos subsequentes.
+                </p>
+              </div>
+              <div class="flex items-start gap-4 pt-4 border-t border-outline/10">
+                <div class="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                <p class="text-on-surface text-lg leading-relaxed">
+                  A filial de <strong>Campinas</strong> concentra o maior volume de movimentação e, consequentemente, o maior número absoluto de ocorrências a serem mitigadas.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Oportunidades -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold mb-6 text-on-surface">Diferenciais Estratégicos LogRapid</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div
+          class="bg-surface-container-low p-5 rounded-xl border border-outline/10 hover:border-primary/40 transition-all group">
+          <span class="material-symbols-outlined text-primary mb-3" data-icon="speed">speed</span>
+          <h5 class="font-bold text-on-surface mb-1">Monitoramento OTIF</h5>
+          <p class="text-xs text-on-surface-variant">Visão em tempo real da aderência aos prazos e qualidade.</p>
+        </div>
+        <div
+          class="bg-surface-container-low p-5 rounded-xl border border-outline/10 hover:border-primary/40 transition-all">
+          <span class="material-symbols-outlined text-primary mb-3" data-icon="search_check">search_check</span>
+          <h5 class="font-bold text-on-surface mb-1">Rastreabilidade</h5>
+          <p class="text-xs text-on-surface-variant">Identificação precisa do responsável pela falha na cadeia.</p>
+        </div>
+        <div
+          class="bg-surface-container-low p-5 rounded-xl border border-outline/10 hover:border-primary/40 transition-all">
+          <span class="material-symbols-outlined text-primary mb-3" data-icon="hub">hub</span>
+          <h5 class="font-bold text-on-surface mb-1">Gestão de Filiais</h5>
+          <p class="text-xs text-on-surface-variant">Comparativo de performance entre diferentes hubs logísticos.</p>
+        </div>
+        <div
+          class="bg-surface-container-low p-5 rounded-xl border border-outline/10 hover:border-primary/40 transition-all">
+          <span class="material-symbols-outlined text-primary mb-3" data-icon="data_exploration">data_exploration</span>
+          <h5 class="font-bold text-on-surface mb-1">Análise de Causa Raiz</h5>
+          <p class="text-xs text-on-surface-variant">Mapeamento detalhado dos motivos de devolução e atraso.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Futuro -->
+    <section class="mb-12">
+      <h2 class="font-headline text-2xl font-bold mb-6 text-on-surface">Plano de Ação Sugerido</h2>
+      <div class="space-y-4">
+        <div class="bg-surface-container-low rounded-xl p-1 overflow-hidden">
+          <div class="flex flex-col md:flex-row items-center bg-surface-container-lowest rounded-lg p-4 gap-6">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-primary" data-icon="sync_alt">sync_alt</span>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold text-lg text-on-surface">Integração Comercial-Logística</h4>
+              <p class="text-on-surface-variant text-sm">Implementar validação automática de pedidos no ERP para reduzir em 50% as ocorrências de 'Falta de Pedido'.</p>
+            </div>
+            <div
+              class="px-4 py-2 bg-surface-container rounded-lg border border-outline/10 text-xs font-mono text-secondary">
+              PRIORIDADE: CRÍTICA</div>
+          </div>
+        </div>
+        <div class="bg-surface-container-low rounded-xl p-1 overflow-hidden">
+          <div class="flex flex-col md:flex-row items-center bg-surface-container-lowest rounded-lg p-4 gap-6">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+            </div>
+            <div class="flex-1">
+              <h4 class="font-bold text-lg text-on-surface">Otimização de Carregamento</h4>
+              <p class="text-on-surface-variant text-sm">Ajustar processos de conferência na filial Campinas para mitigar erros de 'Mercadoria Errada' e 'Preço Errado'.</p>
+            </div>
+            <div
+              class="px-4 py-2 bg-surface-container rounded-lg border border-outline/10 text-xs font-mono text-secondary">
+              PRIORIDADE: ALTA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="mb-16">
+      <h2 class="font-headline text-2xl font-bold mb-8 text-center text-on-surface">Metas para o Próximo Trimestre</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-8 bg-surface-container-low rounded-2xl relative">
+          <div class="text-primary text-6xl font-black font-headline mb-4">85%</div>
+          <div class="font-bold text-on-surface">Meta de OTIF</div>
+          <p class="text-sm text-on-surface-variant mt-2">Aumento de 17% em relação ao patamar atual.</p>
+        </div>
+        <div class="text-center p-8 bg-surface-container-low rounded-2xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
+          <div class="text-primary text-6xl font-black font-headline mb-4">-30%</div>
+          <div class="font-bold text-on-surface">Redução de Falhas Comerciais</div>
+          <p class="text-sm text-on-surface-variant mt-2">Foco em qualidade na entrada de dados.</p>
+        </div>
+        <div class="text-center p-8 bg-surface-container-low rounded-2xl relative">
+          <div class="text-primary text-6xl font-black font-headline mb-4">98%</div>
+          <div class="font-bold text-on-surface">Acuracidade de In Full</div>
+          <p class="text-sm text-on-surface-variant mt-2">Garantia de que o cliente receba exatamente o que pediu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Footer -->
+    <footer class="mt-20 border-t border-outline/10 pt-8 flex flex-wrap justify-center gap-12 items-center opacity-60">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary" data-icon="monitoring">monitoring</span>
+        <span class="text-sm font-mono tracking-widest text-on-surface">POWER BI</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary" data-icon="local_shipping">local_shipping</span>
+        <span class="text-sm font-mono tracking-widest text-on-surface">LOGÍSTICA 4.0</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary" data-icon="database">database</span>
+        <span class="text-sm font-mono tracking-widest text-on-surface">SQL SERVER</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary" data-icon="insights">insights</span>
+        <span class="text-sm font-mono tracking-widest text-on-surface">BI ESTRATÉGICO</span>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
